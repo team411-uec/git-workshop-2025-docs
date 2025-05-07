@@ -269,7 +269,9 @@ git commit -m "コミットメッセージ"
 #### `git push` ●
 
 ローカルリポジトリの変更をリモートリポジトリに反映するコマンドです。
-VSCodeでは、コミットした後に
+VSCode では、コミットした後に「変更の同期」ボタンを押すことで push できます。
+
+![](./git-push.png)
 
 CLI で使うのは少し難しいですが、次のように使います。
 
@@ -290,6 +292,13 @@ git push origin main
 
 ブランチの作成、切り替えを行うことができます。
 
+VSCode では左下のブランチ名をクリックすることで、ブランチの一覧を表示し切り替えることができます。新しくブランチを作ることもできます。
+
+![](./git-switch-1.png)
+![](./git-switch-2.png)
+
+CLI では、
+
 ```zsh
 # ブランチの作成
 git switch -c ブランチ名
@@ -298,10 +307,22 @@ git switch -c ブランチ名
 git switch ブランチ名
 ```
 
+のように使用します。
+
 #### `git pull` ●
 
 リモートリポジトリから変更を取得し、その内容をローカルブランチにマージします。
 マージされる対象は現在作業中のブランチです。
+
+VSCode では「グラフ」の「プル」のアイコンから行うこともできますが、
+
+![](./git-pull-1.png)
+
+左下のアイコンから「push」「pull」「fetch」などをすべてまとめて行うことが多いです。
+
+![](./git-pull-2.png)
+
+CLI では
 
 ```zsh
 git pull
@@ -314,6 +335,10 @@ git pull
 リモートリポジトリの最新の情報を取得します。
 ローカルリポジトリにマージはされません。
 
+VSCode で使用するときは、先ほど説明したボタンを使うことが多いです。
+
+CLI では
+
 ```zsh
 git fetch
 ```
@@ -324,7 +349,11 @@ git fetch
 
 別のブランチの内容を現在のブランチにマージするコマンドです。
 
-ブランチ A にいる状態で
+VSCode では Git Graph から、マージ元のブランチを右クリックし「Merge into current branch」をクリックすることでマージすることができます。
+
+![](./git-merge.png)
+
+CLI では、ブランチ A にいる状態で
 
 ```zsh
 git merge B
@@ -335,6 +364,12 @@ git merge B
 #### `git stash`
 
 ステージしていない作業中の変更を一時退避する機能です。
+
+VSCode では Git Graph でコミットしていない変更（Uncommitted Changes）を右クリックし、「Stash uncommitted changes」をクリックすることでスタッシュができます。
+
+![](./git-stash.png)
+
+CLI では、
 
 ```zsh
 git stash
@@ -395,11 +430,19 @@ git stash clear
 - `--mixed`: add と commit を取り消します
 - `--soft`: commit のみ取り消します
 
-また、どのコミットまで戻したいかを指定でき、`^`や`~`をつけることで直前のコミットを表すことができます（例: `HEAD^`）。
+VSCodeではGit Graphでそこまで戻したいコミットを右クリックし、「Reset current branch to this Commit」をクリックして、オプションを選択することでリセットできます。
+
+![](./git-reset.png)
+
+CLIでも同様に、どのコミットまで戻したいかを指定でき、`^`や`~`をつけることで直前のコミットを表すことができます（例: `HEAD^`）。
 
 #### `git revert`
 
 指定したコミットを「打ち消す」新しいコミットを作成します。
+
+VSCodeではGit Graphでリバートしたいコミットを右クリックし、「Revert」をクリックすることで行えます。
+
+CLIでは、
 
 ```zsh
 git revert コミットID
