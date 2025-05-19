@@ -665,7 +665,7 @@ PR のタイトルは「自分のアカウント名」にしてください。
 
 終わったら、以下のフォームに自分のアカウント名を記入してください。
 
-https://forms.gle/UqmbHkkKpGfq8w429
+[https://forms.gle/UqmbHkkKpGfq8w429](https://forms.gle/UqmbHkkKpGfq8w429)
 
 また、右側にある「Development」から、先ほど発行した Issue を紐づけます。
 
