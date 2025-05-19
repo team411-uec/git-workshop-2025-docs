@@ -176,9 +176,9 @@ Git は CLI（Command Line Interface、雑に言うと黒い画面）で使う�
 
 #### 0.6. (推奨) GitHub Copilot を使用するため学生プランの申請
 
-ここでは、GitHub Copilotを学生プランで無料で使用するための、GitHub Studentへの申請方法を解説します。
-この章の内容は必須ではありませんが、GitHub Copilotを使うことで劇的に作業効率を上げられるので使ってみることをおすすめします。
-また、審査期間が1週間ほどあり、申請したらすぐに使えるようになるわけではないので早めにやることをおすすめします。
+ここでは、GitHub Copilot を学生プランで無料で使用するための、GitHub Student への申請方法を解説します。
+この章の内容は必須ではありませんが、GitHub Copilot を使うことで劇的に作業効率を上げられるので使ってみることをおすすめします。
+また、審査期間が 1 週間ほどあり、申請したらすぐに使えるようになるわけではないので早めにやることをおすすめします。
 
 ## 1. Git
 
@@ -598,9 +598,9 @@ Git は空のディレクトリを追跡できません。そのため、意図�
 
 #### pre-commit について
 
-`pre-commit`を使うことで、Gitのフック（hook）の一つで、`git commit`を実行する前に、任意のスクリプトが実行できます。
+`pre-commit`を使うことで、Git のフック（hook）の一つで、`git commit`を実行する前に、任意のスクリプトが実行できます。
 
-先ほど紹介した`commitlint`の他に、コードのフォーマッタやLinterなどと組み合わせて使用します。
+先ほど紹介した`commitlint`の他に、コードのフォーマッタや Linter などと組み合わせて使用します。
 
 `pre-commit`を設定するには、`husky`や`lefthook`などのツールを使います。
 
@@ -608,6 +608,7 @@ Git は空のディレクトリを追跡できません。そのため、意図�
 - [lefthook](https://github.com/evilmartians/lefthook)
 
 #### GPG を用いたコミットの認証
+
 GPG(GNU Privact Guard)を使うと、コミットに署名する子ができ、そのコミットが本人によるものだと証明できます。
 
 様々な設定方法がありますので、気になる人は公式ドキュメントを覗いてみてください。
@@ -635,20 +636,52 @@ GitHub とは、何でしょうか？
 
 #### リポジトリをクローン（もしくは新しく作成）する
 
+`git@github.com:team411-uec/git-workshop-2025-practice.git` のリポジトリをクローンしてください。
+
 #### Issue を立てる
+
+次に、[Issues](https://github.com/team411-uec/git-workshop-2025-practice/issues?q=sort:updated-desc+is:issue+is:open) から、Issue を発行してください。
+
+Issue の名前は「自分の GitHub のアカウント名」にしてください。
+
+![](./github-create-issue.png)
 
 #### ブランチを切る
 
+ローカルでブランチを新しく作成してください。
+名前は「`feat/<Issue番号>-<アカウント名>`」にしてください。
+（例）Issue 番号が 1、アカウント名が「mimifuwa」の場合「`feat/1-mimifuwa`」となります。
+
 #### コミット・プッシュする
+
+「`自分のアカウント名.md`」というファイルを新しく作成し、中身を適当に編集し、1.3.練習でやったようにコミット・プッシュをしてください。
 
 #### Pull Request(PR)を作成する
 
+プッシュしたら、GitHub の [Pull Requests](https://github.com/team411-uec/git-workshop-2025-practice/pulls?q=sort:updated-desc+is:pr+is:open) から、新たに Pull Request(PR)を作成してください。
+PR のタイトルは「自分のアカウント名」にしてください。
+
+![](./github-create-pr.png)
+
+終わったら、以下のフォームに自分のアカウント名を記入してください。
+
+https://forms.gle/UqmbHkkKpGfq8w429
+
+また、右側にある「Development」から、先ほど発行した Issue を紐づけます。
+
+![](./github-add-issue.png)
+
 #### レビュー
+
+フォームに回答したら講師がレビューをします。
+しばしお待ちを...
 
 #### マージ
 
+![](./github-pr-approved.png)
+
+「Approve」されたら、「Merge pull request」を押し、マージしてください。
+
 #### Issue・PR のクローズ
 
-### 2.2. その他 GitHub でできること
-
-#### GitHub Actions
+マージすると Pull request と Issue が自動的にクローズされます。
